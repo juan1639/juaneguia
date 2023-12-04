@@ -1,0 +1,82 @@
+{
+    "proyectos": [
+        {
+            "nombre": "JBlack Jack",
+            "imagen": "./img/miniatura_bjj.png",
+            "githubURL": "https://github.com/juan1639/JBlackJack",
+            "url": "https://juan1639.github.io/JBlackJack"
+        },
+        {
+            "nombre": "Tetris Pygame",
+            "imagen": "./img/miniatura_tetris2.png",
+            "githubURL": "https://github.com/juan1639/TetrisPygame",
+            "url": "#"
+        },
+        {
+            "nombre": "TetrisJS Responsive",
+            "imagen": "./img/miniatura_tetris_demo.png",
+            "githubURL": "https://github.com/juan1639/Tetris",
+            "url": "https://juan1639.github.io/Tetris"
+        },
+        {
+            "nombre": "PacClonJS",
+            "imagen": "./img/miniatura_pacJon50x50.png",
+            "githubURL": "https://github.com/juan1639/PacClonF",
+            "url": "https://juan1639.github.io/PacClonF"
+        },
+        {
+            "nombre": "PacMan Pygame",
+            "imagen": "./img/miniatura_pacman.png",
+            "githubURL": "https://github.com/juan1639/pacman-python-pygame",
+            "url": "#"
+        },
+        {
+            "nombre": "SnakeJS",
+            "imagen": "./img/miniatura_snake.png",
+            "githubURL": "https://github.com/juan1639/snake-responsive",
+            "url": "https://juan1639.github.io/snake-responsive"
+        },
+        {
+            "nombre": "Snake Java",
+            "imagen": "./img/miniatura_snakeJava2.png",
+            "githubURL": "https://github.com/juan1639/snakeJava",
+            "url": "#"
+        },
+        {
+            "nombre": "Tres Raya Java",
+            "imagen": "./img/miniatura_java_3raya.png",
+            "githubURL": "https://github.com/juan1639/TresRayaJava",
+            "url": "#"
+        },
+        {
+            "nombre": "Puzzle9 React",
+            "imagen": "./img/miniatura_puzzReact.png",
+            "githubURL": "https://github.com/juan1639/Puzzle9",
+            "url": "#"
+        },
+        {
+            "nombre": "PacMan QB64",
+            "imagen": "./img/miniatura_QBPac.png",
+            "githubURL": "https://github.com/juan1639/pacmanQB64",
+            "url": "#"
+        },
+        {
+            "nombre": "RetroGG",
+            "imagen": "./img/miniatura_retroaliens1.png",
+            "githubURL": "https://github.com/juan1639/invaders",
+            "url": "#"
+        },
+        {
+            "nombre": "Curso Pygame",
+            "imagen": "./img/miniatura_cursoPygame3.png",
+            "githubURL": "https://github.com/juan1639/curso-pygame",
+            "url": "#"
+        },
+        {
+            "nombre": "Paises del mundo",
+            "imagen": "./img/miniatura_countries.png",
+            "githubURL": "https://github.com/juan1639/Paises-mundo",
+            "url": "https://juan1639.github.io/Paises-mundo"
+        }
+    ]
+}
