@@ -1,0 +1,269 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100vw;
+  height: fit-content;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  /* #352f01 */
+  background: linear-gradient(#8F7F00, #8F7F00);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+p {
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+  display: inline-block;
+}
+
+.main {
+  border: 1px solid red;
+  max-width: 1000px;
+  width: 100%;
+  height: inherit;
+  padding: 1.5em;
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contenedor__signup-login {
+  border: 1px solid red;
+  width: inherit;
+  height: fit-content;
+  display: flex;
+  justify-content: right;
+}
+
+.signup__login li {
+  margin-left: 1em;
+}
+
+.signup__login li a {
+  padding: .35em .85em;
+  background-color: transparent;
+  border: 1px solid rgb(255, 187, 0);
+  border-radius: 6px;
+  transition: 300ms;
+}
+
+.signup__login li a:hover {
+  background-color: white;
+  color: black;
+}
+
+.contenedor__fotoJuan {
+  border: 1px solid red;
+  width: inherit;
+  display: flex;
+  justify-content: left;
+}
+
+.main .imagen__fotoJuan {
+  border: 1px solid rgb(64, 48, 0);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: url("img/fotoJuan.jpg");
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.contenedor__proyectos {
+  border: 1px solid red;
+  z-index: 100;
+  width: 72%;
+  height: fit-content;
+  margin-left: 28%;
+  margin-top: -20%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1%;
+}
+
+.tarjeta__proyecto {
+  border: 1px solid green;
+  border-radius: 6px;
+  width: 95%;
+  height: 200px;
+  background: url("img/fotoJuan.jpg");
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+/* .main .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+} */
+
+/* .main .top .fa {
+  font-size: 2em;
+  color: white;
+  cursor: pointer;
+  visibility: hidden;
+} */
+
+/* .main .top .links-div {
+  z-index: 100;
+  width: 300px;
+  position: fixed;
+  left: -100%;
+  height: 100vh;
+  background: linear-gradient(to bottom right, rgb(255 255 255 / 70%), rgba(255, 255, 255, 0.6));
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 3px;
+  backdrop-filter: blur(5px);
+  transform: 300ms;
+} */
+
+/* .main .top .links-div .link {
+  margin-left: 3em;
+} */
+
+/* .main .top .links-div .link li {
+  display: block;
+  margin-top: 1.5em;
+} */
+
+/* .main .top .links-div .link li a {
+  color: #505050;
+  font-weight: bold;
+} */
+
+/* .main .top .links-div.active {
+  left: 0;
+  transform: 800ms;
+} */
+
+/* .main .center {
+  position: relative;
+  left: 50%;
+  top: 15%;
+  transform: translate(-50%, -15%);
+  text-align: center;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 8em;
+}
+
+.main .center h1 {
+  font-weight: bold;
+  font-size:clamp(2.5rem, 5vw, 5rem);
+  color: white;
+}
+
+.main .center input {
+  outline: none;
+  border: none;
+  width: 650px;
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 1em;
+  margin-bottom: 1rem;
+  filter: drop-shadow(6px 6px 12px gray);
+}
+
+.main .center span {
+  position: relative;
+  left: -2.9em;
+  cursor: pointer;
+  padding: .5em;
+}
+
+.main ul li {
+  margin: .5em .75em;
+}
+
+.main ul li a {
+  transition: 400ms;
+  padding-bottom: .3em;
+}
+
+.main ul li a:hover {
+  color: white;
+  border-bottom: 2px solid white;
+} */
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bottom {
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw - 2em;
+  margin: auto;
+  position: absolute;
+  bottom: 2em;
+}
+
+.bottom .social ul li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 1em;
+}
+
+.bottom .social ul li a i {
+  color: white;
+  font-size: 1.5em;
+}
+
+/* -------------------------------------------------
+RESPONSIVE
+------------------------------------------------- */
+@media (max-width:768px) {
+
+  .main .center .searh{
+    width: 500px;
+  }
+}
+
+@media (max-width:583px) {
+
+  .main .center span {
+    left: 44%;
+    top:-52px;
+  }
+}
+
+@media (max-width: 580px) {
+
+  .main .center .search {
+    width: 100%;
+  }
+
+  .main .center .links{
+    display: none;
+  }
+  
+  .main .top .fa {
+    cursor: pointer;
+    visibility: visible;
+  }
+}
