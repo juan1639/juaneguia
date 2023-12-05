@@ -8,15 +8,15 @@
         },
         {
             "nombre": "Tetris Pygame",
-            "imagen": "./img/miniatura_tetris2.png",
+            "imagen": "./img/miniatura_tetris_demo.png",
             "githubURL": "https://github.com/juan1639/TetrisPygame",
             "url": "#"
         },
         {
-            "nombre": "TetrisJS Responsive",
-            "imagen": "./img/miniatura_tetris_demo.png",
-            "githubURL": "https://github.com/juan1639/Tetris",
-            "url": "https://juan1639.github.io/Tetris"
+            "nombre": "Galaximi",
+            "imagen": "./img/miniatura_galaximi.png",
+            "githubURL": "https://github.com/juan1639/Galaximi2",
+            "url": "https://juan1639.github.io/Galaximi2"
         },
         {
             "nombre": "PacClonJS",
@@ -49,10 +49,10 @@
             "url": "#"
         },
         {
-            "nombre": "Puzzle9 React",
-            "imagen": "./img/miniatura_puzzReact.png",
-            "githubURL": "https://github.com/juan1639/Puzzle9",
-            "url": "#"
+            "nombre": "DonkeyJon",
+            "imagen": "./img/miniatura_DonkeyJon.png",
+            "githubURL": "https://github.com/juan1639/DonkeyJon",
+            "url": "https://juan1639.github.io/DonkeyJon"
         },
         {
             "nombre": "PacMan QB64",
@@ -70,6 +70,18 @@
             "nombre": "Curso Pygame",
             "imagen": "./img/miniatura_cursoPygame3.png",
             "githubURL": "https://github.com/juan1639/curso-pygame",
+            "url": "#"
+        },
+        {
+            "nombre": "TetrisJS Responsive",
+            "imagen": "./img/miniatura_tetris2.png",
+            "githubURL": "https://github.com/juan1639/Tetris",
+            "url": "https://juan1639.github.io/Tetris"
+        },
+        {
+            "nombre": "Puzzle9 React",
+            "imagen": "./img/miniatura_puzzReact.png",
+            "githubURL": "https://github.com/juan1639/Puzzle9",
             "url": "#"
         },
         {

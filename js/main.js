@@ -8,7 +8,10 @@ import {
     navbar_proyectos
 } from "./constants.js";
 
-import { cambiar_pestana } from "./functions.js";
+import {
+    cambiar_pestana,
+    ver_mas
+} from "./functions.js";
 
 // =================================================================================
 const recibeInfo_proyectos = async () => {
@@ -39,6 +42,8 @@ const muestraResultados = (response) => {
 
     for (let i of response.proyectos) {
 
+        const url = i.url;
+        const ghURL = i.githubURL;
         const img = i.imagen;
         const nombre = i.nombre;
 
@@ -47,10 +52,14 @@ const muestraResultados = (response) => {
         tarjeta.innerHTML = `
             <figure class="contenedor__imagen-tarjeta" style="background:url(${img}); background-size:cover"></figure>
             <div class="contenedor__titulo-tarjeta"><h3>${nombre}</h3></div>
-            <button type="button" class="boton__ver-tarjeta">Ver más</button>
+            <button type="button" class="boton__ver-tarjeta" id=${url}>Ver más</button>
         `;
         
-        contenedor_proyectos.appendChild(tarjeta);    
+        contenedor_proyectos.appendChild(tarjeta);
+        
+        tarjeta.addEventListener('click', (ev) => {
+            ver_mas(ev);
+        });
     }
 
     opcion_proyectosPorDefecto();
