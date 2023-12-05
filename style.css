@@ -1,3 +1,19 @@
+:root {
+  --degradado1: #8F7F00;
+  --degradado2: #9F8F00;
+  --color1: #C19B0F;
+  --color2: #E8D33F;
+  --color3: #EDFF7A;
+  --color4: #D2FF96;
+  --color5: #B7F0AD;
+  --color6: #EEA;
+  --color7: rgb(255, 217, 0);
+  --color8: #111;
+  --color9: #320;
+  --color10: #addbf0;
+  --color11: #3b2eeb;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -19,13 +35,14 @@ body {
 }
 
 p {
-  color: #fff;
-  font-size: 1.2rem;
+  color: var(--color6);
+  font-size: 18px;
 }
 
 a {
-  color: white;
+  color: var(--color6);
   text-decoration: none;
+  cursor: pointer;
 }
 
 ul li {
@@ -34,18 +51,27 @@ ul li {
 }
 
 .main {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   max-width: 1000px;
   width: 100%;
   height: inherit;
-  padding: 1.5em;
+  /* padding: 1.5em; */
   display: block;
   flex-direction: column;
   justify-content: center;
 }
 
+.navbar {
+  /* border: 1px solid var(--color1); */
+  width: inherit;
+  height: 50px;
+  color: var(--color9);
+  background-color: var(--color1);
+  padding: 1% 9% 2% 5%;
+}
+
 .contenedor__signup-login {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   width: inherit;
   height: fit-content;
   display: flex;
@@ -53,26 +79,45 @@ ul li {
 }
 
 .signup__login li {
-  margin-left: 1em;
+  margin: 1em 1em 0 1em;
 }
 
 .signup__login li a {
+  /* border: 1px solid rgb(255, 187, 0); */
+  border: none;
   padding: .35em .85em;
   background-color: transparent;
-  border: 1px solid rgb(255, 187, 0);
   border-radius: 6px;
   transition: 300ms;
 }
 
 .signup__login li a:hover {
-  background-color: white;
-  color: black;
+  background-color: var(--color7);
+  color: var(--color8);
+}
+
+.navbar__proyectos {
+  width: inherit;
+  height: fit-content;
+  font-size: 18px;
+}
+
+.ul__navbar__proyectos {
+  width: inherit;
+  height: inherit;
+  display: inline-flex;
+  justify-content: space-around;
+}
+
+.ul__navbar__proyectos a:hover {
+  text-decoration: underline;
+  color: var(--color11);
 }
 
 .contenedor__fotoJuan {
-  border: 1px solid red;
-  z-index: 5;
+  /* border: 1px solid red; */
   width: inherit;
+  height: fit-content;
   display: flex;
   justify-content: left;
 }
@@ -89,27 +134,43 @@ ul li {
   overflow: hidden;
 }
 
+.info__Juan {
+  width: 75%;
+  max-width: 75%;
+  min-width: 65%;
+  height: 200px;
+  background-color: green;
+  background-color: transparent;
+}
+
 .contenedor__proyectos {
-  border: 1px solid red;
-  z-index: 10;
-  width: 72%;
+  /* border: 1px solid red; */
+  width: inherit;
   height: fit-content;
-  margin-left: 28%;
-  margin-top: -20%;
+  margin-top: 1%;
+  margin-bottom: 20%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1%;
 }
 
 .tarjeta__proyecto {
-  border: 1px solid green;
+  /* border: 1px solid green; */
   border-radius: 6px;
   width: 95%;
   height: 200px;
+  background-color: var(--color6);
+  opacity: 0.9;
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: relative;
+}
+
+.tarjeta__proyecto:hover {
+  top: -5px;
+  left: -5px;
+  box-shadow: 7px 7px 5px var(--color8);
 }
 
 .contenedor__imagen-tarjeta {
@@ -141,9 +202,9 @@ ul li {
   min-height: 15%;
   font-size: 16px;
   font-weight: bold;
-  color: #fff;
-  background: #3a86ff;
-  box-shadow: 0 2px #4433ff;
+  color: var(--color9);
+  background: var(--color10);
+  box-shadow: 0 2px #3392ff;
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
@@ -153,9 +214,10 @@ ul li {
   margin-bottom: 4%;
 }
 
-.boto__ver-tarjeta:hover {
-    box-shadow: 0 3px #4433ff;
-    top: 1px;
+.boton__ver-tarjeta:hover {
+  background: var(--color11);
+  box-shadow: none;
+  top: 1px;
 }
 
 .boton__ver-tarjeta:active {
@@ -256,33 +318,30 @@ ul li {
   border-bottom: 2px solid white;
 } */
 
-.bottom {
-  z-index: -5;
+.social {
+    /* border: 1px solid red; */
+  width: inherit;
+  height: 90px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
+  position: relative;
 }
 
-.bottom {
-  border: 1px solid red;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100vw - 2em;
-  margin: auto;
-  position: absolute;
-  bottom: 2em;
-}
-
-.bottom .social ul li {
+.lista__redesSociales {
+  width: inherit;
+  height: 100%;
+  font-size: 30px;
   list-style: none;
-  display: inline-block;
-  margin-right: 1em;
+  background-color: var(--color8);
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
-.bottom .social ul li a i {
-  color: white;
-  font-size: 1.5em;
+.social .lista__redesSociales a {
+  text-decoration: none;
+  color: var(--color7);
 }
 
 /* -------------------------------------------------
