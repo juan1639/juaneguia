@@ -34,6 +34,10 @@ body {
   justify-content: center;
 }
 
+h1 {
+  font-size: 28px;
+}
+
 p {
   color: var(--color6);
   font-size: 18px;
@@ -64,7 +68,7 @@ ul li {
 .navbar {
   /* border: 1px solid var(--color1); */
   width: inherit;
-  height: 50px;
+  height: fit-content;
   color: var(--color9);
   background-color: var(--color1);
   padding: 1% 9% 2% 5%;
@@ -92,11 +96,13 @@ ul li {
 }
 
 .signup__login li a:hover {
-  background-color: var(--color7);
+  background-color: var(--color1);
   color: var(--color8);
 }
 
 .navbar__proyectos {
+  border: 1px var(--color1);
+  border-style: none none solid none;
   width: inherit;
   height: fit-content;
   font-size: 18px;
@@ -106,12 +112,24 @@ ul li {
   width: inherit;
   height: inherit;
   display: inline-flex;
-  justify-content: space-around;
+  justify-content: right;
+}
+
+.ul__navbar__proyectos li {
+  padding: 1% 8%;
+}
+
+.ul__navbar__proyectos a {
+  font-weight: 600;
+  color: var(--color2);
 }
 
 .ul__navbar__proyectos a:hover {
+  border-radius: 4px;
   text-decoration: underline;
   color: var(--color11);
+  background-color: var(--color1);
+  padding: 0 5%;
 }
 
 .contenedor__fotoJuan {
@@ -139,8 +157,15 @@ ul li {
   max-width: 75%;
   min-width: 65%;
   height: 200px;
-  background-color: green;
+  font-size: 24px;
+  color: var(--color9);
   background-color: transparent;
+}
+
+.info__Juan p {
+  font-size: 18px;
+  color: var(--color4);
+  margin: 5% 9%;
 }
 
 .contenedor__proyectos {
