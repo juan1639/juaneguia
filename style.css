@@ -141,6 +141,7 @@ ul li {
   height: fit-content;
   display: flex;
   justify-content: left;
+  padding: 0 1em;
 }
 
 .main .imagen__fotoJuan {
@@ -180,6 +181,7 @@ ul li {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1%;
+  padding: 0 1em;
 }
 
 .tarjeta__proyecto {
