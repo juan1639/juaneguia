@@ -14,7 +14,8 @@
 <body>
   <main class="main">
     <section class="navbar">
-      <i class="fa fa-bars" aria-hidden="true"></i>
+      <!-- <i class="fa fa-bars" aria-hidden="true"></i> -->
+      <img class="menu__hamburguesa" src="./img/list.svg"/>
       <h1>Juan Eguía</h1>
     </section>
 
@@ -29,13 +30,24 @@
 
     <section class="contenedor__fotoJuan">
       <div class="imagen__fotoJuan"></div>
-      <div class="info__Juan">
+      <article class="info__Juan">
         <h3>Programador autodidacta</h3>
         <p>Me gusta la tecnología en general y en cuanto a la programación suelo desarrollar principalmente juegos en 2D</p>
-      </div>
+        <span id="mis__lenguajes">Lenguajes y tecnologías que uso</span>
+        <img class="caret-abajo" id="caret__misLenguajes" src="./img/chevron-down.svg"/>
+      </article>
+    </section>
+
+    <section id="iconos__lenguajes" style="display: none">
+      <article>
+
+      </article>
     </section>
 
     <section class="navbar__proyectos">
+      <img class="menu__hamburguesa" style="border:1px solid #111" src="./img/list.svg"/>
+      <img class="caret-abajo" id="caret__abajo" src="./img/chevron-down.svg"/>
+
       <ul class="ul__navbar__proyectos">
         <li class="li__navbar__proyectos"><a id="Proyectos" href="#">Proyectos</a></li>
         <li class="li__navbar__proyectos"><a id="Youtube" href="#">Youtube</a></li>
@@ -43,15 +55,22 @@
       </ul>
     </section>
 
-    <section class="contenedor__proyectos"></section></section>
+    <section class="contenedor__proyectos"></section>
 
     <section class="social">
       <ul class="lista__redesSociales">
+        <li><a href="#"><figure><img src="./img/facebook.svg"/></figure></a></li>
+        <li><a href="#"><figure><img src="./img/instagram.svg"/></figure></a></li>
+        <li><a href="#"><i<figure><img src="./img/twitch.svg"/></figure></a></li>
+        <li><a href="#"><figure><img src="./img/twitter-x.svg"/></figure></a></li>
+        <li><a href="#"><figure><img src="./img/youtube.svg"/></figure></a></li>
+      </ul>
+      <!-- <ul class="lista__redesSociales">
         <li><a href=""><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
         <li><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
         <li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
         <li><a href=""><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
-      </ul>
+      </ul> -->
     </section>
   </main>
 </body>

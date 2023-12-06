@@ -1,10 +1,10 @@
 {
     "proyectos": [
         {
-            "nombre": "JBlack Jack",
-            "imagen": "./img/miniatura_bjj.png",
-            "githubURL": "https://github.com/juan1639/JBlackJack",
-            "url": "https://juan1639.github.io/JBlackJack"
+            "nombre": "PacClonJS",
+            "imagen": "./img/miniatura_pacJon50x50.png",
+            "githubURL": "https://github.com/juan1639/PacClonF",
+            "url": "https://juan1639.github.io/PacClonF"
         },
         {
             "nombre": "Tetris Pygame",
@@ -19,10 +19,10 @@
             "url": "https://juan1639.github.io/Galaximi2"
         },
         {
-            "nombre": "PacClonJS",
-            "imagen": "./img/miniatura_pacJon50x50.png",
-            "githubURL": "https://github.com/juan1639/PacClonF",
-            "url": "https://juan1639.github.io/PacClonF"
+            "nombre": "JBlack Jack",
+            "imagen": "./img/miniatura_bjj.png",
+            "githubURL": "https://github.com/juan1639/JBlackJack",
+            "url": "https://juan1639.github.io/JBlackJack"
         },
         {
             "nombre": "PacMan Pygame",

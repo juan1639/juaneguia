@@ -1,6 +1,10 @@
 import {
     navbar_proyectos,
-    valores_iniciales
+    valores_iniciales,
+    carets_abajo,
+    contenedor_proyectos,
+    iconos_lenguajes,
+    ocultos_carets
 } from "./constants.js";
 
 // =================================================================================
@@ -8,6 +12,13 @@ Array.from(navbar_proyectos).forEach(opcion => {
 
     opcion.addEventListener('click', (ev) => {
         cambiar_pestana(ev, opcion);
+    });
+});
+
+Array.from(carets_abajo).forEach(caret => {
+
+    caret.addEventListener('click', (ev) => {
+        acciones_caretsAbajo(ev);
     });
 });
 
@@ -37,7 +48,32 @@ function ver_mas(ev) {
     console.log(ev.target.id, 'ver mas');
 }
 
+// =================================================================================
+function acciones_caretsAbajo(ev) {
+
+    console.log(ev.target.id, 'caret abajo');
+    const idCaret = ev.target.id;
+    const entriesContainer = Object.entries(ocultos_carets);
+    console.log(entriesContainer);
+
+    for (let i of entriesContainer) {
+        if (idCaret === i[0]) {
+
+            const elementoContainer = i[1][0];
+            const displayTipo = i[1][1];
+
+            if (elementoContainer.style.display === 'none') {
+                elementoContainer.style.display = displayTipo;
+
+            } else {
+                elementoContainer.style.display = 'none';
+            }
+        }
+    }
+}
+
 export {
     cambiar_pestana,
-    ver_mas
-}
+    ver_mas,
+    acciones_caretsAbajo
+};

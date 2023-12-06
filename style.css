@@ -55,17 +55,22 @@ ul li {
   display: inline-block;
 }
 
+.caret-abajo:hover {
+  cursor: pointer;
+}
+
 .main {
   /* border: 1px solid red; */
   max-width: 1000px;
   width: 100%;
   height: inherit;
   /* padding: 1.5em; */
-  display: block;
+  display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
+/* ------------------------------------------------------- */
 .navbar {
   /* border: 1px solid var(--color1); */
   width: inherit;
@@ -81,6 +86,18 @@ ul li {
   margin-right: 1em;
 }
 
+.navbar img {
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--color12);
+  border-radius: 6px;
+}
+
+.navbar h1 {
+  margin-left: 1em;
+}
+
+/* ------------------------------------------------------- */
 .contenedor__signup-login {
   /* border: 1px solid red; */
   width: inherit;
@@ -108,14 +125,29 @@ ul li {
   color: var(--color8);
 }
 
+/* ------------------------------------------------------- */
 .navbar__proyectos {
   /* border: 1px var(--color1); */
   /* border-style: none none solid none; */
   width: inherit;
   height: fit-content;
   font-size: 18px;
+  display: inline-flex;
   background-color: var(--color9);
+  padding: 0;
   margin-top: 1em;
+}
+
+.navbar__proyectos img {
+  width: 35px;
+  height: 35px;
+  margin: 0.2em 0 0 0.8em;
+}
+
+#caret__abajo {
+  width: 25px;
+  height: 20px;
+  margin-left: 1.5em;
 }
 
 .ul__navbar__proyectos {
@@ -142,6 +174,7 @@ ul li {
   padding: 0 5%;
 }
 
+/* ------------------------------------------------------- */
 .contenedor__fotoJuan {
   /* border: 1px solid red; */
   width: inherit;
@@ -179,6 +212,22 @@ ul li {
   margin: 5% 9%;
 }
 
+#mis__lenguajes {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--color12);
+  margin: 4% 2% 5% 9%;
+}
+
+/* ------------------------------------------------------- */
+#iconos__lenguajes {
+  width: inherit;
+  height: 100px;
+  background-color: red;
+  display: 'none';
+}
+
+/* ------------------------------------------------------- */
 .contenedor__proyectos {
   /* border: 1px solid red; */
   width: inherit;
@@ -358,6 +407,7 @@ ul li {
   border-bottom: 2px solid white;
 } */
 
+/* ------------------------------------------------------- */
 .social {
     /* border: 1px solid red; */
   width: inherit;
@@ -366,6 +416,7 @@ ul li {
   align-items: center;
   justify-content: space-around;
   position: relative;
+  margin-top: 20%
 }
 
 .lista__redesSociales {
@@ -373,15 +424,29 @@ ul li {
   height: 100%;
   font-size: 30px;
   list-style: none;
-  background-color: var(--color8);
+  color: var(--color2);
+  background-color: var(--color9);
   display: inline-flex;
   align-items: center;
   justify-content: space-around;
+  padding: 2% 1%;
 }
 
 .social .lista__redesSociales a {
   text-decoration: none;
   color: var(--color7);
+}
+
+.social .lista__redesSociales figure {
+  width: fit-content;
+  height: fit-content;
+}
+
+.social .lista__redesSociales img {
+  /* background-color: var(--color2); */
+  /* opacity: 0.5; */
+  width: 35px;
+  height: 35px;
 }
 
 /* -------------------------------------------------
@@ -393,7 +458,7 @@ RESPONSIVE
     font-size: 24px;
   }
   
-  p {
+  p, a {
     color: var(--color6);
     font-size: 12px;
   }
@@ -401,6 +466,16 @@ RESPONSIVE
   .navbar i {
     font-size: 30px;
     margin-right: 0.5em;
+  }
+
+  .navbar h1 {
+    margin-left: 0.5em;
+  }
+
+  .navbar img {
+    width: 30px;
+    height: 30px;
+    margin-top: 0.2em;
   }
 
   .signup__login li {
@@ -412,8 +487,20 @@ RESPONSIVE
     margin-top: 0.5em;
   }
 
+  .navbar__proyectos img {
+    width: 20px;
+    height: 18px;
+    margin: 0.1em 0 0 0.2em;
+  }
+  
+  #caret__abajo {
+    width: 12px;
+    height: 10px;
+    margin-left: 1.7em;
+  }
+
   .ul__navbar__proyectos li {
-    padding: 1% 8%;
+    padding: 1% 6%;
   }
 
   .contenedor__fotoJuan {
@@ -442,11 +529,23 @@ RESPONSIVE
     margin: 1% 2% 1% 6%;
   }
 
+  #mis__lenguajes {
+    font-size: 10px;
+    font-weight: bold;
+    color: var(--color12);
+    margin: 2% 1% 4% 6%;
+  }
+
+  .info__Juan img {
+    width: 15px;
+    height: 10px;
+  }
+
   .contenedor__proyectos {
     margin-top: 1%;
     margin-bottom: 20%;
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1%;
     padding: 0 1em;
   }
@@ -469,6 +568,17 @@ RESPONSIVE
   .boton__ver-tarjeta {
     font-size: 12px;
   }
+
+  .social {
+    /* border: 1px solid red; */
+    height: 50px;
+    margin-top: 130%;
+  }
+
+  .social .lista__redesSociales img {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 @media (max-width:583px) {
@@ -479,4 +589,11 @@ RESPONSIVE
 @media (max-width: 480px) {
 
   
+}
+
+@media (max-width: 360px) {
+
+  .contenedor__proyectos {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

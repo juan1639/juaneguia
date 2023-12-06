@@ -5,12 +5,15 @@
 import {
     valores_iniciales,
     contenedor_proyectos,
-    navbar_proyectos
+    navbar_proyectos,
+    iconos_lenguajes,
+    ocultos_carets
 } from "./constants.js";
 
 import {
     cambiar_pestana,
-    ver_mas
+    ver_mas,
+    acciones_caretsAbajo
 } from "./functions.js";
 
 // =================================================================================
@@ -74,6 +77,9 @@ function opcion_proyectosPorDefecto() {
     for (let i = 0; i < elementos.length; i ++) {
         if (opciones[i][1]) elementos[i].style.backgroundColor = 'var(--color12)';
     }
+
+    // ---------------------------------------------------------
+    iconos_lenguajes.style.display = 'none';
 }
 
 // =================================================================================
