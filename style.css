@@ -72,7 +72,13 @@ ul li {
   height: fit-content;
   color: var(--color9);
   background-color: var(--color1);
-  padding: 1% 9% 2% 5%;
+  display: flex;
+  padding: 2%;
+}
+
+.navbar i {
+  font-size: 36px;
+  margin-right: 1em;
 }
 
 .contenedor__signup-login {
@@ -81,6 +87,7 @@ ul li {
   height: fit-content;
   display: flex;
   justify-content: right;
+  padding: 0 2%;
 }
 
 .signup__login li {
@@ -382,31 +389,94 @@ RESPONSIVE
 ------------------------------------------------- */
 @media (max-width:768px) {
 
-  .main .center .searh{
-    width: 500px;
+  h1 {
+    font-size: 24px;
+  }
+  
+  p {
+    color: var(--color6);
+    font-size: 12px;
+  }
+
+  .navbar i {
+    font-size: 30px;
+    margin-right: 0.5em;
+  }
+
+  .signup__login li {
+    margin: 0.2em 0.2em 0.5em 0.2em;
+  }
+
+  .navbar__proyectos {
+    font-size: 10px;
+    margin-top: 0.5em;
+  }
+
+  .ul__navbar__proyectos li {
+    padding: 1% 8%;
+  }
+
+  .contenedor__fotoJuan {
+    padding: 0 0.5em;
+    display: flex;
+  }
+  
+  .main .imagen__fotoJuan {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .info__Juan {
+    width: 65%;
+    max-width: 65%;
+    min-width: 65%;
+    height: 100px;
+    font-size: 12px;
+    background-color: transparent;
+    margin: 0;
+  }
+  
+  .info__Juan p {
+    font-size: 10px;
+    text-align: justify;
+    margin: 1% 2% 1% 6%;
+  }
+
+  .contenedor__proyectos {
+    margin-top: 1%;
+    margin-bottom: 20%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1%;
+    padding: 0 1em;
+  }
+  
+  .tarjeta__proyecto {
+    /* border: 1px solid green; */
+    width: 95%;
+    height: 200px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .contenedor__titulo-tarjeta {
+    font-size: 12px;
+  }
+  
+  .boton__ver-tarjeta {
+    font-size: 12px;
   }
 }
 
 @media (max-width:583px) {
 
-  .main .center span {
-    left: 44%;
-    top:-52px;
-  }
+  
 }
 
-@media (max-width: 580px) {
+@media (max-width: 480px) {
 
-  .main .center .search {
-    width: 100%;
-  }
-
-  .main .center .links{
-    display: none;
-  }
   
-  .main .top .fa {
-    cursor: pointer;
-    visibility: visible;
-  }
 }
