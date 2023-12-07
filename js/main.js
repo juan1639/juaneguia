@@ -7,6 +7,7 @@ import {
     contenedor_proyectos,
     navbar_proyectos,
     iconos_lenguajes,
+    carets_abajo,
     ocultos_carets
 } from "./constants.js";
 
@@ -16,7 +17,28 @@ import {
     acciones_caretsAbajo
 } from "./functions.js";
 
+let booleanosContainer = Object.entries(ocultos_carets);
+
 // =================================================================================
+//  Eventos (Click...)
+// ---------------------------------------------------------------------------------
+Array.from(navbar_proyectos).forEach(opcion => {
+
+    opcion.addEventListener('click', (ev) => {
+        cambiar_pestana(ev, opcion);
+    });
+});
+
+Array.from(carets_abajo).forEach(caret => {
+
+    caret.addEventListener('click', (ev) => {
+        booleanosContainer = acciones_caretsAbajo(ev, booleanosContainer);
+    });
+});
+
+// =================================================================================
+//  Fetching info tarjetas proyectos
+// ---------------------------------------------------------------------------------
 const recibeInfo_proyectos = async () => {
 
     const endpoint = './json/proyectos.json';
@@ -38,7 +60,7 @@ const recibeInfo_proyectos = async () => {
     }
 }
 
-// =================================================================================
+// ----------------------------------------------------------------------------------
 const muestraResultados = (response) => {
 
     console.log(response);
@@ -84,6 +106,6 @@ function opcion_proyectosPorDefecto() {
 
 // =================================================================================
 window.onload = () => {
-
+    
     recibeInfo_proyectos();
 }

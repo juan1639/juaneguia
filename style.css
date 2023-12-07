@@ -28,7 +28,6 @@ html, body {
 }
 
 body {
-  /* #352f01 */
   background: linear-gradient(#8F7F00, #8F7F00);
   display: flex;
   align-items: flex-start;
@@ -55,8 +54,14 @@ ul li {
   display: inline-block;
 }
 
+.menu__hamburguesa:hover {
+  cursor: pointer;
+  transform: scale(1.3, 1.1);
+}
+
 .caret-abajo:hover {
   cursor: pointer;
+  transform: scale(1.5, 1.5);
 }
 
 .main {
@@ -170,12 +175,17 @@ ul li {
   margin: 4% 2% 5% 9%;
 }
 
+#caret__misLenguajes {
+  margin-top: 1%;
+}
+
 /* ------------------------------------------------------- */
 #iconos__lenguajes {
   width: inherit;
   height: 100px;
   background-color: red;
-  display: 'none';
+  display: 'flex';
+  transition: transform 2s;
 }
 
 /* ------------------------------------------------------- */
@@ -202,6 +212,10 @@ ul li {
   height: 20px;
   margin-left: 1.5em;
 }
+
+/* #caret__abajo:hover {
+  transform: scale(1.5, 1.5);
+} */
 
 .ul__navbar__proyectos {
   width: inherit;
@@ -232,12 +246,14 @@ ul li {
   /* border: 1px solid red; */
   width: inherit;
   height: fit-content;
-  margin-top: 1%;
+  margin-top: 2%;
   margin-bottom: 20%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1%;
   padding: 0 1em;
+  /* transition: display 1s; */
+  transition: transform 2s;
 }
 
 .tarjeta__proyecto {
@@ -542,7 +558,7 @@ RESPONSIVE
   }
 
   .contenedor__proyectos {
-    margin-top: 1%;
+    margin-top: 2%;
     margin-bottom: 20%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
