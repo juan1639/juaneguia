@@ -64,7 +64,7 @@ function acciones_caretsAbajo(ev) {
 
             if (elementoContainer.style.display === 'none') {
                 elementoContainer.style.display = displayTipo;
-
+                
             } else {
                 elementoContainer.style.display = 'none';
             }

@@ -12,7 +12,7 @@
   --color9: #320;
   --color10: #addbf0;
   --color11: #3b2eeb;
-  --color12: #430;
+  --color12: #540;
 }
 
 * {
@@ -126,6 +126,59 @@ ul li {
 }
 
 /* ------------------------------------------------------- */
+.contenedor__fotoJuan {
+  /* border: 1px solid red; */
+  width: inherit;
+  height: fit-content;
+  display: flex;
+  justify-content: left;
+  padding: 0 1em;
+}
+
+.main .imagen__fotoJuan {
+  border: 1px solid rgb(64, 48, 0);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: url("img/fotoJuan.jpg");
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.info__Juan {
+  width: 75%;
+  max-width: 75%;
+  min-width: 65%;
+  height: 200px;
+  font-size: 24px;
+  color: var(--color9);
+  background-color: transparent;
+}
+
+.info__Juan p {
+  font-size: 18px;
+  color: var(--color4);
+  margin: 5% 9%;
+}
+
+#mis__lenguajes {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--color9);
+  margin: 4% 2% 5% 9%;
+}
+
+/* ------------------------------------------------------- */
+#iconos__lenguajes {
+  width: inherit;
+  height: 100px;
+  background-color: red;
+  display: 'none';
+}
+
+/* ------------------------------------------------------- */
 .navbar__proyectos {
   /* border: 1px var(--color1); */
   /* border-style: none none solid none; */
@@ -172,59 +225,6 @@ ul li {
   color: var(--color9);
   background-color: var(--color1);
   padding: 0 5%;
-}
-
-/* ------------------------------------------------------- */
-.contenedor__fotoJuan {
-  /* border: 1px solid red; */
-  width: inherit;
-  height: fit-content;
-  display: flex;
-  justify-content: left;
-  padding: 0 1em;
-}
-
-.main .imagen__fotoJuan {
-  border: 1px solid rgb(64, 48, 0);
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background: url("img/fotoJuan.jpg");
-  background-position: center center;
-  background-size: cover;
-  position: relative;
-  overflow: hidden;
-}
-
-.info__Juan {
-  width: 75%;
-  max-width: 75%;
-  min-width: 65%;
-  height: 200px;
-  font-size: 24px;
-  color: var(--color9);
-  background-color: transparent;
-}
-
-.info__Juan p {
-  font-size: 18px;
-  color: var(--color4);
-  margin: 5% 9%;
-}
-
-#mis__lenguajes {
-  font-size: 20px;
-  font-weight: bold;
-  color: var(--color12);
-  margin: 4% 2% 5% 9%;
-}
-
-/* ------------------------------------------------------- */
-#iconos__lenguajes {
-  width: inherit;
-  height: 100px;
-  background-color: red;
-  display: 'none';
 }
 
 /* ------------------------------------------------------- */
@@ -482,27 +482,6 @@ RESPONSIVE
     margin: 0.2em 0.2em 0.5em 0.2em;
   }
 
-  .navbar__proyectos {
-    font-size: 10px;
-    margin-top: 0.5em;
-  }
-
-  .navbar__proyectos img {
-    width: 20px;
-    height: 18px;
-    margin: 0.1em 0 0 0.2em;
-  }
-  
-  #caret__abajo {
-    width: 12px;
-    height: 10px;
-    margin-left: 1.7em;
-  }
-
-  .ul__navbar__proyectos li {
-    padding: 1% 6%;
-  }
-
   .contenedor__fotoJuan {
     padding: 0 0.5em;
     display: flex;
@@ -526,19 +505,40 @@ RESPONSIVE
   .info__Juan p {
     font-size: 10px;
     text-align: justify;
-    margin: 1% 2% 1% 6%;
-  }
-
-  #mis__lenguajes {
-    font-size: 10px;
-    font-weight: bold;
-    color: var(--color12);
-    margin: 2% 1% 4% 6%;
+    margin: 3% 2% 3% 6%;
   }
 
   .info__Juan img {
     width: 15px;
     height: 10px;
+  }
+
+  #mis__lenguajes {
+    font-size: 10px;
+    font-weight: bold;
+    color: var(--color9);
+    margin: 2% 1% 4% 6%;
+  }
+
+  .navbar__proyectos {
+    font-size: 10px;
+    margin-top: 0.5em;
+  }
+
+  .navbar__proyectos img {
+    width: 10%;
+    height: 95%;
+    margin: 0.1em 0 0 0.2em;
+  }
+  
+  #caret__abajo {
+    width: 8%;
+    height: 6%;
+    margin-left: 1.7em;
+  }
+
+  .ul__navbar__proyectos li {
+    padding: 3% 6%;
   }
 
   .contenedor__proyectos {
@@ -591,7 +591,7 @@ RESPONSIVE
   
 }
 
-@media (max-width: 360px) {
+@media (max-width: 400px) {
 
   .contenedor__proyectos {
     grid-template-columns: repeat(1, 1fr);
