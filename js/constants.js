@@ -4,7 +4,9 @@ export class Settings {
     constructor() {
         
         this.doms = {
+            principal: document.getElementById('principal'),
             navbar_proyectos: document.getElementsByClassName('li__navbar__proyectos'),
+            contenedores_scroll: document.getElementById('contenedores__scroll'),
             contenedor_proyectos: document.getElementsByClassName('contenedor__proyectos'),
             iconos_lenguajes: document.getElementById('iconos__lenguajes'),
             carets: document.getElementsByClassName('caret-abajo')

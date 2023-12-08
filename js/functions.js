@@ -33,16 +33,13 @@ function cambiar_pestana_navbarProyectos(ev, opcion) {
         if (idProyecto[0] === target) {
             idProyecto[1] = true;
 
-            const offSetY = i * -50;
+            let margenLeft = -(i * 100);
+            margenLeft = margenLeft.toString();
 
-            change_contenedor[i].style.transform = `translate(-99%,0%)`;
-            // change_contenedor[i].style.transform = `scale(i + 1, 1)`;
-            // change_contenedor[i].style.display = 'grid';
+            settings.doms.contenedores_scroll.style.marginLeft = margenLeft + '%';
         
         } else {
             idProyecto[1] = false;
-            change_contenedor[i].style.transform = `translate(-95%, 0%)`;
-            // change_contenedor[i].style.display = 'none';
         }
 
         console.log(idProyecto[0], idProyecto[1]);

@@ -254,27 +254,25 @@ ul li {
 
 /* ------------------------------------------------------- */
 #contenedores__scroll {
-  /* border: 2px solid green; */
   width: 300%;
   height: fit-content;
   display: flex;
-  /* flex-direction: column; */
-  /* overflow: hidden; */
+  transition: all 1.2s;
 }
 
 /* ------------------------------------------------------- */
 .contenedor__proyectos {
   /* border: 1px solid red; */
-  width: 33%;
+  width: 100%;
   height: fit-content;
-  margin-top: 2%;
-  margin-bottom: 20%;
+  margin-top: 1em;
+  margin-bottom: 5em;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1%;
   padding: 0 1em;
   /* transition: display 1s; */
-  transition: transform 2s;
+  transition: transform 1.2s;
 }
 
 .tarjeta__proyecto {
@@ -486,8 +484,8 @@ RESPONSIVE
   }
 
   .contenedor__proyectos {
-    margin-top: 2%;
-    margin-bottom: 20%;
+    margin-top: 1em;
+    margin-bottom: 5em;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1%;

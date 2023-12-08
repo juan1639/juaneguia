@@ -92,13 +92,11 @@ const muestraResultados = (response) => {
         `;
         
         settings.doms.contenedor_proyectos[1].appendChild(tarjeta);
-        
+
         tarjeta.addEventListener('click', (ev) => {
             ver_mas(ev);
         });
     }
-
-    // settings.doms.contenedor_proyectos[1].style.transform = 'scale(0.01, 0.01)';
 
     for (let i of response.proyectos) {
 
@@ -116,13 +114,11 @@ const muestraResultados = (response) => {
         `;
         
         settings.doms.contenedor_proyectos[2].appendChild(tarjeta);
-        
+
         tarjeta.addEventListener('click', (ev) => {
             ver_mas(ev);
         });
     }
-
-    // settings.doms.contenedor_proyectos[2].style.transform = 'scale(0.01, 0.01)';
 
     opcion_proyectosPorDefecto();
 }
