@@ -1,31 +1,29 @@
 // =================================================================================
-const navbar_proyectos = document.getElementsByClassName('li__navbar__proyectos');
+export class Settings {
 
-const valores_iniciales = {
-    pestana_proyectos: [
-        ['Proyectos', true],
-        ['Youtube', false],
-        ['Recursos', false]
-    ]
-};
+    constructor() {
+        
+        this.doms = {
+            navbar_proyectos: document.getElementsByClassName('li__navbar__proyectos'),
+            contenedor_proyectos: document.getElementsByClassName('contenedor__proyectos'),
+            iconos_lenguajes: document.getElementById('iconos__lenguajes'),
+            carets: document.getElementsByClassName('caret-abajo')
+        }
 
-// ---------------------------------------------------------------------------------
-const contenedor_proyectos = document.querySelector('.contenedor__proyectos');
-const iconos_lenguajes = document.getElementById('iconos__lenguajes');
+        this.valores_iniciales = {
+            navbar_proyectos: [
+                ['Proyectos', true],
+                ['Youtube', false],
+                ['Recursos', false]
+            ],
+            carets: {
+                iconos_lenguajes: null,
+                contenedor_proyectos: null
+            }
+        }
 
-// ---------------------------------------------------------------------------------
-const carets_abajo = document.getElementsByClassName('caret-abajo');
-
-const ocultos_carets = {
-    caret__abajo: [contenedor_proyectos, 'grid', true],
-    caret__misLenguajes: [iconos_lenguajes, 'flex', true]
-};
-
-export {
-    valores_iniciales,
-    contenedor_proyectos,
-    iconos_lenguajes,
-    navbar_proyectos,
-    carets_abajo,
-    ocultos_carets
-};
+        this.misc = {
+            contador: -1
+        }
+    }
+}

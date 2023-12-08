@@ -2,39 +2,28 @@
 //  Portfolio Juan Eguia
 // 
 // =================================================================================
-import {
-    valores_iniciales,
-    contenedor_proyectos,
-    navbar_proyectos,
-    iconos_lenguajes,
-    carets_abajo,
-    ocultos_carets
-} from "./constants.js";
+import { Settings } from './constants.js';
 
 import {
-    cambiar_pestana,
+    cambiar_pestana_navbarProyectos,
     ver_mas,
     acciones_caretsAbajo
 } from "./functions.js";
 
-let booleanosContainer = Object.entries(ocultos_carets);
+let settings;
+
 
 // =================================================================================
 //  Eventos (Click...)
 // ---------------------------------------------------------------------------------
-Array.from(navbar_proyectos).forEach(opcion => {
 
-    opcion.addEventListener('click', (ev) => {
-        cambiar_pestana(ev, opcion);
-    });
-});
 
-Array.from(carets_abajo).forEach(caret => {
+/* Array.from(carets_abajo).forEach(caret => {
 
     caret.addEventListener('click', (ev) => {
         booleanosContainer = acciones_caretsAbajo(ev, booleanosContainer);
     });
-});
+}); */
 
 // =================================================================================
 //  Fetching info tarjetas proyectos
@@ -80,12 +69,60 @@ const muestraResultados = (response) => {
             <button type="button" class="boton__ver-tarjeta" id=${url}>Ver más</button>
         `;
         
-        contenedor_proyectos.appendChild(tarjeta);
+        settings.doms.contenedor_proyectos[0].appendChild(tarjeta);
         
         tarjeta.addEventListener('click', (ev) => {
             ver_mas(ev);
         });
     }
+
+    for (let i of response.proyectos) {
+
+        const url2 = i.url;
+        const ghURL = i.githubURL;
+        const img2 = i.imagen;
+        const nombre2 = i.nombre;
+
+        const tarjeta = document.createElement('div');
+        tarjeta.setAttribute('class', 'tarjeta__proyecto');
+        tarjeta.innerHTML = `
+            <figure class="contenedor__imagen-tarjeta" style="background:url(${img2}); background-size:cover"></figure>
+            <div class="contenedor__titulo-tarjeta"><h3>${nombre2}</h3></div>
+            <button type="button" class="boton__ver-tarjeta" id=${url2}>Ver más</button>
+        `;
+        
+        settings.doms.contenedor_proyectos[1].appendChild(tarjeta);
+        
+        tarjeta.addEventListener('click', (ev) => {
+            ver_mas(ev);
+        });
+    }
+
+    // settings.doms.contenedor_proyectos[1].style.transform = 'scale(0.01, 0.01)';
+
+    for (let i of response.proyectos) {
+
+        const url3 = i.url;
+        const ghURL = i.githubURL;
+        const img3 = i.imagen;
+        const nombre3 = i.nombre;
+
+        const tarjeta = document.createElement('div');
+        tarjeta.setAttribute('class', 'tarjeta__proyecto');
+        tarjeta.innerHTML = `
+            <figure class="contenedor__imagen-tarjeta" style="background:url(${img3}); background-size:cover"></figure>
+            <div class="contenedor__titulo-tarjeta"><h3>${nombre3}</h3></div>
+            <button type="button" class="boton__ver-tarjeta" id=${url3}>Ver más</button>
+        `;
+        
+        settings.doms.contenedor_proyectos[2].appendChild(tarjeta);
+        
+        tarjeta.addEventListener('click', (ev) => {
+            ver_mas(ev);
+        });
+    }
+
+    // settings.doms.contenedor_proyectos[2].style.transform = 'scale(0.01, 0.01)';
 
     opcion_proyectosPorDefecto();
 }
@@ -93,19 +130,26 @@ const muestraResultados = (response) => {
 // =================================================================================
 function opcion_proyectosPorDefecto() {
 
-    const elementos = Array.from(navbar_proyectos);
-    const opciones = valores_iniciales.pestana_proyectos;
+    const elementos = Array.from(settings.doms.navbar_proyectos);
+    const opciones = settings.valores_iniciales.navbar_proyectos;
 
     for (let i = 0; i < elementos.length; i ++) {
         if (opciones[i][1]) elementos[i].style.backgroundColor = 'var(--color12)';
     }
-
-    // ---------------------------------------------------------
-    iconos_lenguajes.style.display = 'none';
 }
 
 // =================================================================================
 window.onload = () => {
-    
+
+    settings = new Settings();
     recibeInfo_proyectos();
+
+    Array.from(settings.doms.navbar_proyectos).forEach(opcion => {
+
+        opcion.addEventListener('click', (ev) => {
+            cambiar_pestana_navbarProyectos(ev, opcion);
+        });
+    });
 }
+
+export {settings};

@@ -1,31 +1,61 @@
 import {
-    valores_iniciales,
-    contenedor_proyectos,
-    iconos_lenguajes,
-    navbar_proyectos,
-    carets_abajo,
-    ocultos_carets
-} from "./constants.js";
+    settings
+} from "./main.js";
 
 // =================================================================================
-function cambiar_pestana(ev, opcion) {
+function cambiar_pestana_navbarProyectos(ev, opcion) {
 
     console.log(ev.target.id);
     const target = ev.target.id;
-    const opciones = valores_iniciales.pestana_proyectos;
+    const opciones = settings.valores_iniciales.navbar_proyectos;
+    const change_contenedor = settings.doms.contenedor_proyectos;
     
-    Array.from(navbar_proyectos).forEach(borra => {
+    Array.from(settings.doms.navbar_proyectos).forEach(borra => {
         borra.style.backgroundColor = 'transparent';
     });
     
     opcion.style.backgroundColor = 'var(--color12)';
+
+    const contador = actualiza_contador();
+
+    const valores = [
+        [[-100, 0], [0, -100], [0, 0]],
+        [[-200, 0], [-100, 0], [0, -100]],
+        [[0, 0], [0, 100], [0, 200]]
+    ];
+
+    let i = -1;
     
-    for (let i of opciones) {
+    for (let idProyecto of opciones) {
+
+        i ++;
         
-        if (i[0] === target) {i[1] = true;} else {i[1] = false;}
+        if (idProyecto[0] === target) {
+            idProyecto[1] = true;
+
+            const offSetY = i * -50;
+
+            change_contenedor[i].style.transform = `translate(-99%,0%)`;
+            // change_contenedor[i].style.transform = `scale(i + 1, 1)`;
+            // change_contenedor[i].style.display = 'grid';
         
-        console.log(i[0], i[1]);
+        } else {
+            idProyecto[1] = false;
+            change_contenedor[i].style.transform = `translate(-95%, 0%)`;
+            // change_contenedor[i].style.display = 'none';
+        }
+
+        console.log(idProyecto[0], idProyecto[1]);
     }
+}
+
+// =================================================================================
+function actualiza_contador() {
+
+    settings.misc.contador ++;
+    if (settings.misc.contador >= 3) settings.misc.contador = 0;
+
+    return settings.misc.contador;
 }
 
 // =================================================================================
@@ -73,7 +103,7 @@ function acciones_caretsAbajo(ev, booleanosContainer) {
 }
 
 export {
-    cambiar_pestana,
+    cambiar_pestana_navbarProyectos,
     ver_mas,
     acciones_caretsAbajo
 };
