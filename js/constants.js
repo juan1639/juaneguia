@@ -25,6 +25,7 @@ export class Settings {
             ],
             carets_fa: [
                 ['iconos_lenguajes', false, '-49%', '0.0', '2em', '0%', '1', 'fit-content'],
+                ['contenedores_scroll', true, '-49%', '0.0', '4em', '0%', '1', 'fit-content']
             ]
         }
 
