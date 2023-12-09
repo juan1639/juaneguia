@@ -143,6 +143,13 @@ window.onload = () => {
             acciones_caretsAbajo(ev, index, caret);
         });
     });
+
+    Array.from(settings.doms.carets_fa).forEach((caret, index) => {
+        
+        caret.addEventListener('click', (ev) => {
+            acciones_caretsAbajo(ev, index, caret);
+        });
+    });
 }
 
 export {settings};

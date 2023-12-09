@@ -46,31 +46,48 @@ function ver_mas(ev) {
 // =================================================================================
 function acciones_caretsAbajo(ev, index, caret) {
 
+    
     console.log(ev.target.id, 'caret abajo');
     const idCaret = ev.target.id;
 
-    const elemento = settings.valores_iniciales.carets[index][0];
-    let booleano = settings.valores_iniciales.carets[index][1];
+    console.log(caret.className);
 
-    const translY = settings.valores_iniciales.carets[index][2];
-    const scaleY = settings.valores_iniciales.carets[index][3];
-    const height = settings.valores_iniciales.carets[index][4];
+    let tipoCaret ='carets';
 
-    const translY2 = settings.valores_iniciales.carets[index][5];
-    const scaleY2 = settings.valores_iniciales.carets[index][6];
-    const height2 = settings.valores_iniciales.carets[index][7];
+    if (caret.className === 'fa fa-caret-down') {
+        tipoCaret = 'carets_fa';
+        caret.className = 'fa fa-caret-up';
+
+    } else if (caret.className === 'fa fa-caret-up') {
+        tipoCaret = 'carets_fa';
+        caret.className = 'fa fa-caret-down';
+    }
+
+    if (caret.className === 'caret-abajo') tipoCaret = 'carets';
+
+    const elemento = settings.valores_iniciales[tipoCaret][index][0];
+    let booleano = settings.valores_iniciales[tipoCaret][index][1];
+
+    const translY = settings.valores_iniciales[tipoCaret][index][2];
+    const scaleY = settings.valores_iniciales[tipoCaret][index][3];
+    const height = settings.valores_iniciales[tipoCaret][index][4];
+
+    const translY2 = settings.valores_iniciales[tipoCaret][index][5];
+    const scaleY2 = settings.valores_iniciales[tipoCaret][index][6];
+    const height2 = settings.valores_iniciales[tipoCaret][index][7];
 
     console.log(booleano);
 
     if (booleano) {
         settings.doms[elemento].style.transform = `translateY(${translY}) scale(1, ${scaleY})`;
         settings.doms[elemento].style.height = height;
-        settings.valores_iniciales.carets[index][1] = false;
+        settings.valores_iniciales[tipoCaret][index][1] = false;
+        
         
     } else {
         settings.doms[elemento].style.transform = `translateY(${translY2}) scale(1, ${scaleY2})`;
         settings.doms[elemento].style.height = height2;
-        settings.valores_iniciales.carets[index][1] = true;
+        settings.valores_iniciales[tipoCaret][index][1] = true;
     }
 }
 

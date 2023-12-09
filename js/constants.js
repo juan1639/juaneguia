@@ -9,7 +9,8 @@ export class Settings {
             contenedores_scroll: document.getElementById('contenedores__scroll'),
             contenedor_proyectos: document.getElementsByClassName('contenedor__proyectos'),
             iconos_lenguajes: document.getElementById('iconos__lenguajes'),
-            carets: document.getElementsByClassName('caret-abajo')
+            carets: document.getElementsByClassName('caret-abajo'),
+            carets_fa: document.getElementsByClassName('fa fa-caret-down')
         }
 
         this.valores_iniciales = {
@@ -19,8 +20,11 @@ export class Settings {
                 ['Recursos', false]
             ],
             carets: [
-                ['iconos_lenguajes', false, '-49%', '0.0', '2em', '0%', '1', 'fit-content'],
+                // ['iconos_lenguajes', false, '-49%', '0.0', '2em', '0%', '1', 'fit-content'],
                 ['contenedores_scroll', true, '-49%', '0.0', '4em', '0%', '1', 'fit-content']
+            ],
+            carets_fa: [
+                ['iconos_lenguajes', false, '-49%', '0.0', '2em', '0%', '1', 'fit-content'],
             ]
         }
 
