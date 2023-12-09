@@ -41,19 +41,28 @@ const muestraResultados = (response) => {
 
     console.log(response);
 
+    let contador = 999;
+
     for (let i of response.proyectos) {
+
+        contador --;
 
         const url = i.url;
         const ghURL = i.githubURL;
         const img = i.imagen;
         const nombre = i.nombre;
+        const descripcion = i.descripcion;
+        const blank = '_blank';
 
         const tarjeta = document.createElement('div');
         tarjeta.setAttribute('class', 'tarjeta__proyecto');
+        tarjeta.style.zIndex = contador.toString();
         tarjeta.innerHTML = `
-            <figure class="contenedor__imagen-tarjeta" style="background:url(${img}); background-size:cover"></figure>
-            <div class="contenedor__titulo-tarjeta"><h3>${nombre}</h3></div>
-            <button type="button" class="boton__ver-tarjeta" id=${url}>Ver más</button>
+            <a class="contenedor__imagen-tarjeta" style="background:url(${img}); background-size:cover" href=${url} target=${blank}></a>
+            <div class="contenedor__titulo-tarjeta">
+            <details><summary>${nombre}</summary><p>${descripcion}</p></details>
+            </div>
+            <a class="boton__ver-tarjeta" id=${url} href=${url} target=${blank}>Ver más</a>
         `;
         
         settings.doms.contenedor_proyectos[0].appendChild(tarjeta);
@@ -62,7 +71,7 @@ const muestraResultados = (response) => {
             ver_mas(ev);
         });
     }
-
+    
     for (let i of response.proyectos) {
 
         const url2 = i.url;

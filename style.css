@@ -66,6 +66,14 @@ ul li {
   transform: scale(1.3, 1.2);
 }
 
+.fa-caret-down:hover {
+  cursor: pointer;
+}
+
+.fa-caret-up:hover {
+  cursor: pointer;
+}
+
 .caret-abajo:hover {
   cursor: pointer;
   transform: scale(1.5, 1.5);
@@ -159,7 +167,7 @@ ul li {
 }
 
 .info__Juan {
-  width: 75%;
+  width: 70%;
   max-width: 75%;
   min-width: 65%;
   height: 200px;
@@ -167,20 +175,21 @@ ul li {
   color: var(--color8);
   text-shadow: 1px 1px 1px var(--color5);
   background-color: transparent;
+  float: right;
 }
 
 .info__Juan p {
   font-size: 18px;
   color: var(--color4);
   text-shadow: 1px 1px 1px black;
-  margin: 5% 9%;
+  margin: 5% 2% 4% 8%;
 }
 
 #mis__lenguajes {
   font-size: 20px;
   font-weight: bold;
   color: var(--color8);
-  margin: 0 1% 5% 9%;
+  margin: 0 2% 5% 10%;
 }
 
 #caret__misLenguajes {
@@ -340,6 +349,22 @@ ul li {
   position: relative;
 }
 
+.contenedor__titulo-tarjeta summary {
+  font-weight: bold;
+  font-size: 16px;
+  color: rgb(133, 20, 5);
+}
+
+.contenedor__titulo-tarjeta p {
+  border-radius: 5px;
+  font-weight: 300;
+  font-size: 14px;
+  font-style: italic;
+  color: black;
+  background-color: var(--color1);
+  padding: 1em;
+}
+
 .boton__ver-tarjeta {
   border: none;
   border-radius: 5px;
@@ -360,12 +385,12 @@ ul li {
 }
 
 .boton__ver-tarjeta:hover {
-  transform: scale(1.5, 1.5);
+  transform: scale(1.7, 1.8);
   opacity: 1;
 }
 
 .boton__ver-tarjeta:active {
-    transform: scale(1.5, 1.5);
+    transform: scale(1.7, 1.8);
     opacity: 1;
 }
 

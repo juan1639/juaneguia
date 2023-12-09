@@ -4,91 +4,106 @@
             "nombre": "PacClonJS",
             "imagen": "./img/miniatura_pacJon50x50.png",
             "githubURL": "https://github.com/juan1639/PacClonF",
-            "url": "https://juan1639.github.io/PacClonF"
+            "url": "https://juan1639.github.io/PacClonF",
+            "descripcion": "Recreación del juego clásico arcade Pacman programado en JavaScript vanilla, usando sólo la etiqueta canvas"
         },
         {
             "nombre": "Tetris Pygame",
             "imagen": "./img/miniatura_tetris_demo.png",
             "githubURL": "https://github.com/juan1639/TetrisPygame",
-            "url": "#"
+            "url": "#",
+            "descripcion": "Una versión del juego clásico Tetris hecha en python con la librería pygame"
         },
         {
             "nombre": "Galaximi",
             "imagen": "./img/miniatura_galaximi.png",
             "githubURL": "https://github.com/juan1639/Galaximi2",
-            "url": "https://juan1639.github.io/Galaximi2"
+            "url": "https://juan1639.github.io/Galaximi2",
+            "descripcion": "Recreación de un juego clásico tipo Galaxian, Space Invaders, etc. hecha en JavaScript vanilla, usando sólo la etiqueta canvas"
         },
         {
             "nombre": "JBlack Jack",
             "imagen": "./img/miniatura_bjj.png",
             "githubURL": "https://github.com/juan1639/JBlackJack",
-            "url": "https://juan1639.github.io/JBlackJack"
+            "url": "https://juan1639.github.io/JBlackJack",
+            "descripcion": "Un sencillo proyecto del juego de cartas Back-Jack en JS vanilla, usando sólo CSS"
         },
         {
             "nombre": "PacMan Pygame",
             "imagen": "./img/miniatura_pacman.png",
             "githubURL": "https://github.com/juan1639/pacman-python-pygame",
-            "url": "#"
+            "url": "#",
+            "descripcion": "Recreación del juego clásico Pacman en python con la librería pygame. En mi canal hay una serie de unos 20 vídeos acerca del proyecto"
         },
         {
             "nombre": "SnakeJS",
             "imagen": "./img/miniatura_snake.png",
             "githubURL": "https://github.com/juan1639/snake-responsive",
-            "url": "https://juan1639.github.io/snake-responsive"
+            "url": "https://juan1639.github.io/snake-responsive",
+            "descripcion": "Un pequeño proyecto en JavaScript, sólo usando CSS, del llamado juego de la serpiente, también conocido con otros nombres, como snake, viborita, etc..."
         },
         {
             "nombre": "Snake Java",
             "imagen": "./img/miniatura_snakeJava2.png",
             "githubURL": "https://github.com/juan1639/snakeJava",
-            "url": "#"
+            "url": "#",
+            "descripcion": "Un pequeño proyecto en Java, del llamado juego de la serpiente, también conocido con otros nombres, como snake, viborita, etc..."
         },
         {
             "nombre": "Tres Raya Java",
             "imagen": "./img/miniatura_java_3raya.png",
             "githubURL": "https://github.com/juan1639/TresRayaJava",
-            "url": "#"
+            "url": "#",
+            "descripcion": "Pequeño proyecto del juego 3 en Raya, programado en Java"
         },
         {
             "nombre": "DonkeyJon",
             "imagen": "./img/miniatura_DonkeyJon.png",
             "githubURL": "https://github.com/juan1639/DonkeyJon",
-            "url": "https://juan1639.github.io/DonkeyJon"
+            "url": "https://juan1639.github.io/DonkeyJon",
+            "descripcion": "Recreación de un juego de tipo plataformas verticales en JavaScript vanilla, usando sólo la etiqueta canvas"
         },
         {
             "nombre": "PacMan QB64",
             "imagen": "./img/miniatura_QBPac.png",
             "githubURL": "https://github.com/juan1639/pacmanQB64",
-            "url": "#"
+            "url": "#",
+            "descripcion": "Recreación juego clásico arcade Pacman, programado en lenguaje Basic QB64"
         },
         {
             "nombre": "RetroGG",
             "imagen": "./img/miniatura_retroaliens1.png",
             "githubURL": "https://github.com/juan1639/invaders",
-            "url": "#"
+            "url": "#",
+            "descripcion": "Recreación de un juego clásico tipo Galaxian, Space Invaders, etc. programado en lenguaje Basic QB64. En mi canal hay una serie de vídeos acerca de este proyecto"
         },
         {
             "nombre": "Curso Pygame",
             "imagen": "./img/miniatura_cursoPygame3.png",
             "githubURL": "https://github.com/juan1639/curso-pygame",
-            "url": "#"
+            "url": "#",
+            "descripcion": "Archivos pertenecientes a la serie de videos de mi canal del curso básico acerca de la librería pygame de python"
         },
         {
             "nombre": "TetrisJS Responsive",
             "imagen": "./img/miniatura_tetris2.png",
             "githubURL": "https://github.com/juan1639/Tetris",
-            "url": "https://juan1639.github.io/Tetris"
+            "url": "https://juan1639.github.io/Tetris",
+            "descripcion": "Recreación del juego clásico Tetris, programado en JavaScript vanilla, usando sólo la etiqueta canvas"
         },
         {
             "nombre": "Puzzle9 React",
             "imagen": "./img/miniatura_puzzReact.png",
             "githubURL": "https://github.com/juan1639/Puzzle9",
-            "url": "#"
+            "url": "#",
+            "descripcion": "Pequeño proyecto de un juego tipo Puzzle, programado en React"
         },
         {
             "nombre": "Paises del mundo",
             "imagen": "./img/miniatura_countries.png",
             "githubURL": "https://github.com/juan1639/Paises-mundo",
-            "url": "https://juan1639.github.io/Paises-mundo"
+            "url": "https://juan1639.github.io/Paises-mundo",
+            "descripcion": "Pequeño proyecto de un fecthing de datos de la API pública paises del mundo"
         }
     ]
 }

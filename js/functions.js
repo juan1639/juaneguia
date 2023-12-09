@@ -9,7 +9,7 @@ function cambiar_pestana_navbarProyectos(ev, opcion) {
     const target = ev.target.id;
     const opciones = settings.valores_iniciales.navbar_proyectos;
     const change_contenedor = settings.doms.contenedor_proyectos;
-    
+
     Array.from(settings.doms.navbar_proyectos).forEach(borra => {
         borra.style.backgroundColor = 'transparent';
     });
@@ -40,7 +40,11 @@ function cambiar_pestana_navbarProyectos(ev, opcion) {
 
 // =================================================================================
 function ver_mas(ev) {
-    console.log(ev.target.id, 'ver mas');
+    
+    const target = ev.target.id;
+    console.log(target, 'ver mas');
+
+    if (target === '#') console.log('####');
 }
 
 // =================================================================================
