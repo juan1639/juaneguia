@@ -191,10 +191,15 @@ ul li {
 /* ------------------------------------------------------- */
 #iconos__lenguajes {
   width: inherit;
-  height: 100px;
-  background-color: red;
+  height: fit-content;
   display: 'flex';
-  transition: transform 2s;
+  transition: all 1.2s;
+}
+
+.iconos-lenguajes {
+  width: inherit;
+  height: 85px;
+  background-color: red;
 }
 
 /* ------------------------------------------------------- */
@@ -271,7 +276,6 @@ ul li {
   grid-template-columns: repeat(3, 1fr);
   gap: 1%;
   padding: 0 1em;
-  /* transition: display 1s; */
   transition: transform 1.2s;
 }
 
@@ -413,7 +417,7 @@ RESPONSIVE
     margin-left: 0.5em;
   }
 
-  .navbar img {
+  .navbar .menu__hamburguesa {
     width: 30px;
     height: 30px;
     margin-top: 0.2em;
@@ -460,6 +464,10 @@ RESPONSIVE
     height: 12px;
     opacity: 0.8;
     padding-top: 0.4em;
+  }
+
+  .iconos-lenguajes {
+    height: 50px;
   }
 
   .navbar__proyectos {

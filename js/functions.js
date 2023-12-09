@@ -16,14 +16,6 @@ function cambiar_pestana_navbarProyectos(ev, opcion) {
     
     opcion.style.backgroundColor = 'var(--color12)';
 
-    const contador = actualiza_contador();
-
-    const valores = [
-        [[-100, 0], [0, -100], [0, 0]],
-        [[-200, 0], [-100, 0], [0, -100]],
-        [[0, 0], [0, 100], [0, 200]]
-    ];
-
     let i = -1;
     
     for (let idProyecto of opciones) {
@@ -47,56 +39,39 @@ function cambiar_pestana_navbarProyectos(ev, opcion) {
 }
 
 // =================================================================================
-function actualiza_contador() {
-
-    settings.misc.contador ++;
-    if (settings.misc.contador >= 3) settings.misc.contador = 0;
-
-    return settings.misc.contador;
-}
-
-// =================================================================================
 function ver_mas(ev) {
     console.log(ev.target.id, 'ver mas');
 }
 
 // =================================================================================
-function acciones_caretsAbajo(ev, booleanosContainer) {
+function acciones_caretsAbajo(ev, index, caret) {
 
     console.log(ev.target.id, 'caret abajo');
     const idCaret = ev.target.id;
-    const entriesContainer = Object.entries(ocultos_carets);
-    console.log(entriesContainer);
 
-    let contador = -1;
+    const elemento = settings.valores_iniciales.carets[index][0];
+    let booleano = settings.valores_iniciales.carets[index][1];
 
-    for (let i of entriesContainer) {
+    const translY = settings.valores_iniciales.carets[index][2];
+    const scaleY = settings.valores_iniciales.carets[index][3];
+    const height = settings.valores_iniciales.carets[index][4];
 
-        contador ++;
+    const translY2 = settings.valores_iniciales.carets[index][5];
+    const scaleY2 = settings.valores_iniciales.carets[index][6];
+    const height2 = settings.valores_iniciales.carets[index][7];
 
-        if (idCaret === i[0]) {
+    console.log(booleano);
 
-            const elementoContainer = i[1][0];
-            const displayTipo = i[1][1];
-            const booleano = i[1][2];
-
-            console.log(booleano, booleanosContainer[contador][1][2]);
-
-            if (!booleano) {
-                // elementoContainer.style.display = displayTipo;
-                elementoContainer.style.transform = 'translateY(0%) scale(1, 1)';
-                booleanosContainer[contador][1][2] = true;
-            
-            } else {
-                // elementoContainer.style.display = 'none';
-                elementoContainer.style.transform = 'translateY(-45%) scale(1, 0)';
-                // elementoContainer.style.transform = 'scale(1, 0.1)';
-                booleanosContainer[contador][1][2] = false;
-            }
-        }
+    if (booleano) {
+        settings.doms[elemento].style.transform = `translateY(${translY}) scale(1, ${scaleY})`;
+        settings.doms[elemento].style.height = height;
+        settings.valores_iniciales.carets[index][1] = false;
+        
+    } else {
+        settings.doms[elemento].style.transform = `translateY(${translY2}) scale(1, ${scaleY2})`;
+        settings.doms[elemento].style.height = height2;
+        settings.valores_iniciales.carets[index][1] = true;
     }
-
-    return booleanosContainer;
 }
 
 export {

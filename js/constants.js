@@ -18,10 +18,10 @@ export class Settings {
                 ['Youtube', false],
                 ['Recursos', false]
             ],
-            carets: {
-                iconos_lenguajes: null,
-                contenedor_proyectos: null
-            }
+            carets: [
+                ['iconos_lenguajes', false, '-49%', '0.0', '2em', '0%', '1', 'fit-content'],
+                ['contenedores_scroll', true, '-49%', '0.0', '4em', '0%', '1', 'fit-content']
+            ]
         }
 
         this.misc = {

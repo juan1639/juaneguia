@@ -12,19 +12,6 @@ import {
 
 let settings;
 
-
-// =================================================================================
-//  Eventos (Click...)
-// ---------------------------------------------------------------------------------
-
-
-/* Array.from(carets_abajo).forEach(caret => {
-
-    caret.addEventListener('click', (ev) => {
-        booleanosContainer = acciones_caretsAbajo(ev, booleanosContainer);
-    });
-}); */
-
 // =================================================================================
 //  Fetching info tarjetas proyectos
 // ---------------------------------------------------------------------------------
@@ -132,6 +119,9 @@ function opcion_proyectosPorDefecto() {
     for (let i = 0; i < elementos.length; i ++) {
         if (opciones[i][1]) elementos[i].style.backgroundColor = 'var(--color12)';
     }
+
+    settings.doms.iconos_lenguajes.style.transform = 'translateY(-49%) scale(1, 0.0)';
+    settings.doms.iconos_lenguajes.style.height = '2em';
 }
 
 // =================================================================================
@@ -144,6 +134,13 @@ window.onload = () => {
 
         opcion.addEventListener('click', (ev) => {
             cambiar_pestana_navbarProyectos(ev, opcion);
+        });
+    });
+
+    Array.from(settings.doms.carets).forEach((caret, index) => {
+
+        caret.addEventListener('click', (ev) => {
+            acciones_caretsAbajo(ev, index, caret);
         });
     });
 }
