@@ -31,13 +31,14 @@ export class Settings {
         };
 
         this.mis_lenguajesImg = [
-            './img/ico_css.png',
-            './img/ico_html.png',
-            './img/ico_java.png',
-            './img/ico_nodejs.png',
-            './img/ico_python.png',
-            './img/ico_react.png',
-            './img/ico_sql.png'
+            './img/html-1.svg',
+            './img/css-3.svg',
+            './img/javascript-1.svg',
+            './img/jquery-444684.svg',
+            './img/react-2.svg',
+            './img/java.svg',
+            './img/python-4.svg',
+            './img/node-js-736399.svg',
         ];
 
         this.misc = {
