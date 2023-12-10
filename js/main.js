@@ -5,6 +5,7 @@
 import { Settings } from './constants.js';
 
 import {
+    carga_misLenguajes_imagenes,
     cambiar_pestana_navbarProyectos,
     ver_mas,
     acciones_caretsAbajo
@@ -138,6 +139,7 @@ window.onload = () => {
 
     settings = new Settings();
     recibeInfo_proyectos();
+    carga_misLenguajes_imagenes();
 
     Array.from(settings.doms.navbar_proyectos).forEach(opcion => {
 

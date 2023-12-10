@@ -9,9 +9,10 @@ export class Settings {
             contenedores_scroll: document.getElementById('contenedores__scroll'),
             contenedor_proyectos: document.getElementsByClassName('contenedor__proyectos'),
             iconos_lenguajes: document.getElementById('iconos__lenguajes'),
+            iconos_lenguajesContainer: document.getElementById('iconos-lenguajes'),
             carets: document.getElementsByClassName('caret-abajo'),
             carets_fa: document.getElementsByClassName('fa fa-caret-down')
-        }
+        };
 
         this.valores_iniciales = {
             navbar_proyectos: [
@@ -27,10 +28,20 @@ export class Settings {
                 ['iconos_lenguajes', false, '-49%', '0.0', '2em', '0%', '1', 'fit-content'],
                 ['contenedores_scroll', true, '-49%', '0.0', '4em', '0%', '1', 'fit-content']
             ]
-        }
+        };
+
+        this.mis_lenguajesImg = [
+            './img/ico_css.png',
+            './img/ico_html.png',
+            './img/ico_java.png',
+            './img/ico_nodejs.png',
+            './img/ico_python.png',
+            './img/ico_react.png',
+            './img/ico_sql.png'
+        ];
 
         this.misc = {
-            contador: -1
-        }
+            contador: undefined
+        };
     }
 }

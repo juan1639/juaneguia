@@ -81,7 +81,7 @@ ul li {
 
 .main {
   /* border: 1px solid red; */
-  max-width: 1000px;
+  max-width: 2000px;
   width: 100%;
   height: inherit;
   /* padding: 1.5em; */
@@ -171,7 +171,7 @@ ul li {
   max-width: 75%;
   min-width: 65%;
   height: 200px;
-  font-size: 24px;
+  font-size: 26px;
   color: var(--color8);
   text-shadow: 1px 1px 1px var(--color5);
   background-color: transparent;
@@ -180,13 +180,14 @@ ul li {
 
 .info__Juan p {
   font-size: 18px;
-  color: var(--color4);
+  /* color: var(--color4); */
+  color: var(--colorAmarillo);
   text-shadow: 1px 1px 1px black;
   margin: 5% 2% 4% 8%;
 }
 
 #mis__lenguajes {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: bold;
   color: var(--color8);
   margin: 0 2% 5% 10%;
@@ -201,16 +202,60 @@ ul li {
 
 /* ------------------------------------------------------- */
 #iconos__lenguajes {
+  border: 1px solid var(--color7);
   width: inherit;
   height: fit-content;
-  display: 'flex';
+  background-color: var(--color5);
+  display: flex;
+  margin-top: 0.6em;
   transition: all 1.2s;
 }
 
-.iconos-lenguajes {
-  width: inherit;
+#iconos-lenguajes {
+  width: fit-content;
   height: 85px;
-  background-color: var(--color11);
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-left: 100%;
+  background-color: inherit;
+  animation: anima_lenguajes 15s linear infinite backwards;
+}
+
+.iconos-lenguajes {
+  width: 60px;
+  height: 50px;
+  background-color: transparent;
+}
+
+.pacman {
+  border-radius: 50%;
+  width: 60px;
+  height: 50px;
+  background-color: var(--color3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#boca_pacman {
+  box-sizing: content-box;
+  border: 30px solid;
+  border-color: transparent transparent transparent var(--color5);
+  width: 1px;
+  height: 1px;
+  animation: pacman_anima 0.5s steps(2) infinite;
+}
+
+@keyframes anima_lenguajes {
+
+  0% {margin-left: 100%;}
+  100% {margin-left: -90%;}
+}
+
+@keyframes pacman_anima {
+  0% {border-width: 30px}
+  100% {border-style: none}
 }
 
 /* ------------------------------------------------------- */
@@ -499,7 +544,7 @@ RESPONSIVE
   }
 
   #mis__lenguajes {
-    font-size: 10px;
+    font-size: 12px;
     font-weight: bold;
     color: var(--color9);
   }
@@ -512,8 +557,38 @@ RESPONSIVE
   }
 
   /* ----------------------------------------------- */
-  .iconos-lenguajes {
+  #iconos-lenguajes {
     height: 50px;
+    gap: 1em;
+    animation: anima_lenguajes 15s linear infinite backwards;
+  }
+  
+  .iconos-lenguajes {
+    width: 40px;
+    height: 35px;
+  }
+  
+  .pacman {
+    width: 40px;
+    height: 35px;
+  }
+  
+  #boca_pacman {
+    border: 20px solid;
+    border-color: transparent transparent transparent var(--color5);
+    width: 1px;
+    height: 1px;
+  }
+
+  @keyframes anima_lenguajes {
+
+    0% {margin-left: 100%;}
+    100% {margin-left: -150%;}
+  }
+  
+  @keyframes pacman_anima {
+    0% {border-width: 20px}
+    100% {border-style: none}
   }
 
   /* ----------------------------------------------- */

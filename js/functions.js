@@ -3,6 +3,21 @@ import {
 } from "./main.js";
 
 // =================================================================================
+function carga_misLenguajes_imagenes() {
+
+    for (let i = 0; i < settings.mis_lenguajesImg.length; i ++) {
+
+        const archivoImg = settings.mis_lenguajesImg[i];
+
+        const lenguajeImg = document.createElement('img');
+        lenguajeImg.setAttribute('class', 'iconos-lenguajes');
+        lenguajeImg.src = archivoImg;
+
+        settings.doms.iconos_lenguajesContainer.appendChild(lenguajeImg);
+    }
+}
+
+// =================================================================================
 function cambiar_pestana_navbarProyectos(ev, opcion) {
 
     console.log(ev.target.id);
@@ -96,6 +111,7 @@ function acciones_caretsAbajo(ev, index, caret) {
 }
 
 export {
+    carga_misLenguajes_imagenes,
     cambiar_pestana_navbarProyectos,
     ver_mas,
     acciones_caretsAbajo
