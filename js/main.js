@@ -3,18 +3,20 @@
 // 
 // =================================================================================
 import { Settings } from './constants.js';
+import { crearElementos_fetchingJson } from './fetching-iter.js';
 
 import {
     carga_misLenguajes_imagenes,
     cambiar_pestana_navbarProyectos,
     ver_mas,
-    acciones_caretsAbajo
+    acciones_caretsAbajo,
 } from "./functions.js";
 
 let settings;
 
 // =================================================================================
 //  Fetching info tarjetas proyectos
+//  
 // ---------------------------------------------------------------------------------
 const recibeInfo_proyectos = async () => {
 
@@ -43,37 +45,27 @@ const muestraResultados = (response) => {
     console.log(response);
 
     let contador = 999;
+    let opcionIndex = -1;
+    const navbar_opciones = Object.keys(response);
 
-    for (let i of response.proyectos) {
+    for (let opcionElegida of navbar_opciones) {
 
-        contador --;
+        opcionIndex ++;
 
-        const url = i.url;
-        const ghURL = i.githubURL;
-        const img = i.imagen;
-        const nombre = i.nombre;
-        const descripcion = i.descripcion;
-        const blank = '_blank';
+        for (let i of response[opcionElegida]) {
 
-        const tarjeta = document.createElement('div');
-        tarjeta.setAttribute('class', 'tarjeta__proyecto');
-        tarjeta.style.zIndex = contador.toString();
-        tarjeta.innerHTML = `
-            <a class="contenedor__imagen-tarjeta" style="background:url(${img}); background-size:cover" href=${url} target=${blank}></a>
-            <div class="contenedor__titulo-tarjeta">
-            <details><summary>${nombre}</summary><p>${descripcion}</p></details>
-            </div>
-            <a class="boton__ver-tarjeta" id=${url} href=${url} target=${blank}>Ver más</a>
-        `;
-        
-        settings.doms.contenedor_proyectos[0].appendChild(tarjeta);
-        
-        tarjeta.addEventListener('click', (ev) => {
-            ver_mas(ev);
-        });
+            contador --;
+
+            const tarjeta = crearElementos_fetchingJson(i, contador, opcionIndex);
+            settings.doms.contenedor_proyectos[opcionIndex].appendChild(tarjeta);
+            
+            tarjeta.addEventListener('click', (ev) => {
+                ver_mas(ev);
+            });
+        }
     }
-    
-    for (let i of response.proyectos) {
+
+    /* for (let i of response.videos) {
 
         const url2 = i.url;
         const ghURL = i.githubURL;
@@ -93,7 +85,7 @@ const muestraResultados = (response) => {
         tarjeta.addEventListener('click', (ev) => {
             ver_mas(ev);
         });
-    }
+    } */
 
     for (let i of response.proyectos) {
 

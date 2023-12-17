@@ -39,12 +39,11 @@ function cambiar_pestana_navbarProyectos(ev, opcion) {
         
         if (idProyecto[0] === target) {
             idProyecto[1] = true;
-
+            
             let margenLeft = -(i * 100);
             margenLeft = margenLeft.toString();
-
             settings.doms.contenedores_scroll.style.marginLeft = margenLeft + '%';
-        
+            
         } else {
             idProyecto[1] = false;
         }

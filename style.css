@@ -329,6 +329,13 @@ ul li {
 }
 
 /* ------------------------------------------------------- */
+/* #contenedores__scroll {
+  width: 300%;
+  height: fit-content;
+  display: flex;
+  transition: all 1.2s;
+} */
+
 #contenedores__scroll {
   width: 300%;
   height: fit-content;
@@ -338,7 +345,6 @@ ul li {
 
 /* ------------------------------------------------------- */
 .contenedor__proyectos {
-  /* border: 1px solid red; */
   width: 100%;
   height: fit-content;
   margin-top: 1em;
@@ -347,7 +353,7 @@ ul li {
   grid-template-columns: repeat(3, 1fr);
   gap: 1%;
   padding: 0 1em;
-  transition: transform 1.2s;
+  transition: transform 1.0s;
 }
 
 .tarjeta__proyecto {
@@ -437,6 +443,43 @@ ul li {
 .boton__ver-tarjeta:active {
     transform: scale(1.7, 1.8);
     opacity: 1;
+}
+
+.boton__youtube-tarjeta {
+  border: none;
+  border-radius: 7px;
+  width: fit-content;
+  height: fit-content;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background: red;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  position: absolute;
+  opacity: 0.7;
+  outline: none;
+  padding: 3% 5% 3% 9%;
+  align-self: center;
+}
+
+.boton__youtube-tarjeta:hover {
+  transform: scale(1.7, 1.8);
+  opacity: 1;
+}
+
+.boton__youtube-tarjeta:active {
+    transform: scale(1.7, 1.8);
+    opacity: 1;
+}
+
+#youtube__triangulo {
+  width: 1;
+  height: 1;
+  border-style: solid;
+  border-color: transparent transparent transparent white;
+  border-width: 10px;
 }
 
 /* ------------------------------------------------------- */
