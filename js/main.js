@@ -64,51 +64,7 @@ const muestraResultados = (response) => {
             });
         }
     }
-
-    /* for (let i of response.videos) {
-
-        const url2 = i.url;
-        const ghURL = i.githubURL;
-        const img2 = i.imagen;
-        const nombre2 = i.nombre;
-
-        const tarjeta = document.createElement('div');
-        tarjeta.setAttribute('class', 'tarjeta__proyecto');
-        tarjeta.innerHTML = `
-            <figure class="contenedor__imagen-tarjeta" style="background:url(${img2}); background-size:cover"></figure>
-            <div class="contenedor__titulo-tarjeta"><h3>${nombre2}</h3></div>
-            <button type="button" class="boton__ver-tarjeta" id=${url2}>Ver más</button>
-        `;
-        
-        settings.doms.contenedor_proyectos[1].appendChild(tarjeta);
-
-        tarjeta.addEventListener('click', (ev) => {
-            ver_mas(ev);
-        });
-    } */
-
-    for (let i of response.proyectos) {
-
-        const url3 = i.url;
-        const ghURL = i.githubURL;
-        const img3 = i.imagen;
-        const nombre3 = i.nombre;
-
-        const tarjeta = document.createElement('div');
-        tarjeta.setAttribute('class', 'tarjeta__proyecto');
-        tarjeta.innerHTML = `
-            <figure class="contenedor__imagen-tarjeta" style="background:url(${img3}); background-size:cover"></figure>
-            <div class="contenedor__titulo-tarjeta"><h3>${nombre3}</h3></div>
-            <button type="button" class="boton__ver-tarjeta" id=${url3}>Ver más</button>
-        `;
-        
-        settings.doms.contenedor_proyectos[2].appendChild(tarjeta);
-
-        tarjeta.addEventListener('click', (ev) => {
-            ver_mas(ev);
-        });
-    }
-
+    
     opcion_proyectosPorDefecto();
 }
 

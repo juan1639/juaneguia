@@ -20,7 +20,7 @@ function crearElementos_fetchingJson(i, contador, opcionIndex) {
             <div class="contenedor__titulo-tarjeta">
             <details><summary>${nombre}</summary><p>${descripcion}</p></details>
             </div>
-            <a class="boton__ver-tarjeta" id=${url} href=${url} target=${blank}>Ver más</a>
+            <a class="boton__ver-tarjeta" id=${url} href=${url} target=${blank}>Jugar</a>
         `;
     
     } else if (opcionIndex === 1) {
@@ -33,6 +33,16 @@ function crearElementos_fetchingJson(i, contador, opcionIndex) {
             <a class="boton__youtube-tarjeta" id=${url} href=${url} target=${blank}>
             <span id="youtube__triangulo"></span>
             </a>
+        `;
+    
+    } else if (opcionIndex === 2) {
+
+        tarjeta.innerHTML = `
+            <a class="contenedor__imagen-tarjeta" style="background:url(${img}); background-size:cover" href=${url} target=${blank}></a>
+            <div class="contenedor__titulo-tarjeta">
+            <details><summary>${nombre}</summary><p>${descripcion}</p></details>
+            </div>
+            <a class="boton__ver-tarjeta" id=${url} href=${url} target=${blank}>Ver más</a>
         `;
     }
 

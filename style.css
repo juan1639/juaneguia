@@ -179,6 +179,7 @@ ul li {
 }
 
 .info__Juan p {
+  max-width: 500px;
   font-size: 18px;
   /* color: var(--color4); */
   color: var(--colorAmarillo);
